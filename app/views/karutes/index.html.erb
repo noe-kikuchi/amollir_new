@@ -1,0 +1,16 @@
+
+
+<h2>一人一人に合ったオールハンド施術</h2>
+<h2>身体に溜まった老廃物を流し出す</h2>
+
+
+<% if user_signed_in?%>
+  <h2>ログインしています</h2>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<% else %>
+  <h2>ログインしていません</h2>
+  <%= link_to "新規登録", new_user_registration_path %>
+  <%= link_to "ログイン", new_user_session_path %>
+<% end %>
+
+<%= link_to "管理者", rails_admin_path %>
