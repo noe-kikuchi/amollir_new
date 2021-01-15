@@ -1,0 +1,56 @@
+.top-page-header{
+  background-color: #F5F5DC;
+  height: 150px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.amollir_logo{
+  height: 150px;
+  width: 300px;
+}  
+
+ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  min-width: 200px;
+}
+
+li{
+  font-size: 20px;
+  margin-right: 20px;
+  
+/* border: 1px　solid #339933; */
+/* font-family: 'Sawarabi Mincho', sans-serif; */
+}
+
+.course-list{
+  text-decoration: none;
+  color: #339933;
+}
+
+.shop-list{
+  text-decoration: none;
+  color: #339933;
+}
+
+.access-list{
+  text-decoration: none;
+  color: #339933;
+}
+.blog-list{
+  text-decoration: none;
+  color: #339933;
+}
+.inquiry-list{
+  text-decoration: none;
+  color: #339933;
+}
+
+.admin-list{
+  text-decoration: none;
+  color: #339933;
+}

@@ -1,24 +1,82 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| family_name        | string  | null: false               |
+| first_name         | string  | null: false               |
+| family_name_kana   | string  | null: false               |
+| first_name_kana    | string  | null: false               |
+| birth_date_id      | date    | null: false               |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
+| phone_number       | string  | null: false               |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :calenders
+- has_one :karute
+- has_one :address
 
-* Configuration
+## address テーブル
 
-* Database creation
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| postal_code   | string     | null: false                    |
+| prefecture_id | integer    | null: false                    |
+| city          | string     | null: false                    |
+| address       | string     | null: false                    |
+| building_name | string     |                                |
+| user          | references | null: false, foreign_key: true |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :user
 
-* Services (job queues, cache servers, search engines, etc.)
+## calender テーブル
+ 
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| date_id       | date       | null: false                    |
+| time          | time       | null: false                    |
+| menu_id       | integer    | null: false                    |
+| user          | references | null: false, foreign_key: true |
+| karute        | references | null: false, foreign_key: true |
 
-* Deployment instructions
+### Association
 
-* ...
+- belongs_to :user
+- has_many :calender_karute
+- has_many :karute, through: :calender_karute
+
+## karute テーブル
+ 
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| pain          | text       |                                |
+| illness       | text       |                                |
+| history       | text       |                                |
+| medicine      | text       |                                |
+| habit         | text       |                                |
+| memo          | text       |                                |
+| user          | references | null: false, foreign_key: true |
+| calender      | references | foreign_key: true              |
+
+
+### Association
+
+- belongs_to :user
+- has_many :calender_karute
+- has_many :calender, through: :calender_karute
+
+
+## calender_karute テーブル
+
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| calender      | references | null: false, foreign_key: true |
+| karute        | references | null: false, foreign_key: true |
+
+- belongs_to :calender
+- belongs_to :karute

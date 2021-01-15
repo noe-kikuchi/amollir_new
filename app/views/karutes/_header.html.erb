@@ -1,0 +1,17 @@
+<%# CSS・・・assets/stylesheets/karute/header.css %>
+<header class='top-page-header'>
+  <div class='left-header'>
+    <%= link_to image_tag("0.png", class:"amollir_logo"), "/" %> 
+  </div>
+  <div class='right-header'>  
+    <ul class='header_list'>
+      <li><%= link_to 'コースメニュー', "#", class: "course-list" %></li>
+      <li><%= link_to '店の様子', "#", class: "shop-list" %></li>
+      <li><%= link_to 'アクセス', "#", class: "access-list" %></li>
+      <li><%= link_to 'ブログ', "#", class: "blog-list" %></li>
+      <li><%= link_to 'お問い合わせ', "#", class: "inquiry-list" %></li>
+      <li ><%= link_to '（仮）管理者', new_user_session_path, class: "admin-list" %>
+      <%# <li ><%= link_to '（仮）管理者', rails_admin_path, class: "admin-list" %></li>
+    </ul>  
+  </div>
+</header>
