@@ -2,9 +2,21 @@
 
 <% if user_signed_in?%>
   <h2>管理者のみ表示されます</h2>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> 
   <%= link_to 'ユーザー情報管理ページ', rails_admin_path, class: "admin-list" %>
   <%= link_to 'カルテ作成', "#", class: "admin-list" %>
+
+  <h2>患者カルテ一覧</h2>
+  <ul class='user_list'>
+    <% @users.each do |user| %>
+      <li class='list'>
+          <%= link_to user_path(user.id), method: :get do %>
+          <%= user.family_name %>
+          <%= user.first_name %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
 <% end %>
 
 
@@ -12,4 +24,4 @@
 <h2>身体に溜まった老廃物を流し出す</h2>
 
 
-
+<%# <%= link_to user_karute_path(user.id), method: :get do %>

@@ -1,0 +1,93 @@
+<h1>カルテ</h1>
+<%= link_to '一覧に戻る', root_path %>
+<% unless @user.karute.present?%> 
+  <%= link_to 'カルテを追加', new_user_karute_path(@user.id), method: :get %>
+<% else %> 
+  <%= link_to 'カルテを編集',"#" %>
+  <h2 class="page-heading"><%= "#{@user.family_name}#{@user.first_name}さんのカルテ"%></h2>
+
+  <div class="date">
+    <%= "更新日#{@user.karute.date}" %>
+  </div>
+  <div class="name">
+    <div class="kana">
+      <%= "#{@user.family_name_kana}#{@user.first_name_kana}" %>
+    </div>
+    <div class="kanji">
+      <%= "#{@user.family_name}#{@user.first_name}" %>
+    </div>  
+  </div>
+
+  <div class="birth">
+    <%= "#{@user.birth_date_id}生" %>
+  </div>
+
+  <div class="address_space">
+    <div class="postal_code">
+      <%= "〒#{@user.address.postal_code}" %>
+    </div>
+
+    <div class="address">
+      <%= @user.address.prefecture %>
+      <%= @user.address.city %>
+      <%= @user.address.address %>
+      <%= @user.address.building_name %>
+    </div>
+
+    <div class="phone_number">
+      <%= @user.phone_number %>
+    </div>
+
+  </div>
+
+  <div class="user_karute">
+      <div class="pain">
+        <div class="item">
+        痛みのある部位
+        </div>
+        <%= @user.karute.pain %>
+      </div>
+      <div class="illness">
+        <div class="item">
+        既往症
+        </div>
+        <%= @user.karute.illness %>
+      </div>
+
+      <div class="history">
+        <div class="item">
+        通院歴
+        </div>
+        <%= @user.karute.history %>
+      </div>
+
+      <div class="medicine">
+        <div class="item">
+        服用している薬
+        </div>
+        <%= @user.karute.medicine %>
+      </div>
+
+      <div class="habit">
+        <div class="item">
+        日常的に行っている行動
+        </div>
+        <%= @user.karute.habit %>
+      </div>
+      <div class="memo">
+        <div class="item">
+        メモ
+        </div>
+        <%= @user.karute.memo %>
+      </div>
+  </div>
+<% end %> 
+
+
+
+
+
+
+
+
+
