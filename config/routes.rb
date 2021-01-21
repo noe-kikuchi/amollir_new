@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   end
   root to: "karutes#index"
   resources :users, only: [:show] do
-    resources :karutes, only: [:index, :new, :create, :show]
+    resources :karutes, shallow: true
   end
+
+  resources :menus, only: [:index]
+  resources :bulogs, only: [:index]
+  resources :accesses, only: [:index]
 end
