@@ -1,0 +1,20 @@
+.karute-title{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.field{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.actions{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-btn{
+  border: 1px solid black;
+  padding: 5px;
+  color: black;
+}
