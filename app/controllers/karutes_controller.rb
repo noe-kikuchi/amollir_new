@@ -1,6 +1,8 @@
 class KarutesController < ApplicationController
   def index
-    @users = User.where.not(id: current_user.id) 
+    @users = User.all
+    # where.not(id: current_user.id) 
+    # .all
   end
 
   def new
@@ -18,30 +20,23 @@ class KarutesController < ApplicationController
     end
   end
 
-  def show
-    unless @karute.present?
-      render :new
-    else
-      @karute = Karute.find(params[:id])
-      @karute = Karute.new
-    end
+  def edit
+    @karute = Karute.find(params[:id])
+    @karute.user_id = params[:user_id]
   end
 
+  def update
+    @karute = Karute.find(params[:id])
+    if @karute.update(karute_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+      
   private
 
   def karute_params
     params.require(:karute).permit(:pain, :illness, :history, :medicine, :habit, :memo, :date)
   end
 end
-# .merge(user_id: @karute.user_id)
-# .merge(user_id: params[:user_id])
-# .require(:karute)
-# .merge(user_id: params[:user_id])
-# .merge(user_id: current_user.id)
-# @karute.user_id = @user.id
-
-
-
-    # @user_id = @karute.user.id
-    # @karute = @user.karute
-    # , notice: '保存できませんでした'

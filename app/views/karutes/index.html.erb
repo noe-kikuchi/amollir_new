@@ -1,24 +1,34 @@
+
 <%= render "header"%>
 
-<% if user_signed_in?%>
-  <h2>管理者のみ表示されます</h2>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> 
-  <%= link_to 'ユーザー情報管理ページ', rails_admin_path, class: "admin-list" %>
-  <%= link_to 'カルテ作成', "#", class: "admin-list" %>
+<div class="admin">
 
-  <h2>患者カルテ一覧</h2>
-  <ul class='user_list'>
-    <% @users.each do |user| %>
-      <li class='list'>
-          <%= link_to user_path(user.id), method: :get do %>
-          <%= user.family_name %>
-          <%= user.first_name %>
-        <% end %>
-      </li>
+  <% if user_signed_in?%>
+    <% if current_user.admin_flg? %>
+      <div class="tab">
+        <h2>一覧は管理者のみ表示されます</h2>
+        
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log_out_btn" %>
+        <%= link_to 'ユーザー情報管理ページ', rails_admin_path, class: "admin_btn" %>
+        
+      </div>  
+
+      <div class="karute_user">
+        <h2>患者カルテ一覧</h2>
+        <ul class='user_list'>
+          <% @users.each do |user| %>
+            <li class='list'>
+                <%= link_to user_path(user.id), method: :get do %>
+                <%= user.family_name %>
+                <%= user.first_name %>
+                <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>  
     <% end %>
-  </ul>
-<% end %>
-
+  <% end %>
+</div>
 
 <h2>一人一人に合ったオールハンド施術</h2>
 <h2>身体に溜まった老廃物を流し出す</h2>

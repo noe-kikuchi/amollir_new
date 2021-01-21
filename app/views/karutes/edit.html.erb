@@ -1,7 +1,9 @@
-<h2 class="karute-title">カルテ入力</h2>
+<h2 class="karute-title">カルテ編集</h2>
 
-<%= form_with model: @karute, url: user_karutes_path, local: true do |f| %> 
+<%= form_with model: @karute, local: true do |f| %> 
 <%= render 'shared/error_messages', model: f.object %> 
+
+  
 
   <div class="field">
     <%= f.label "作成日" %><br />
@@ -39,14 +41,8 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "カルテ作成", class: :form__btn  %>
+    <%= f.submit "カルテ編集", class: :form__btn  %>
     <%=link_to 'もどる', root_path, class:"back-btn" %>
   </div>
 
 <% end %>
-
-
-  <%# <div class="karute-btn-contents">
-      <%= f.submit "登録" , class: :form__btn %>
-      <%# <%=link_to 'もどる', root_path, class:"back-btn" %>
-  <%# </div> %> 
