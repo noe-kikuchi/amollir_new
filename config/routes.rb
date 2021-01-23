@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -7,8 +7,17 @@ Rails.application.routes.draw do
     get 'addresses', to: 'users/registrations#new_address'
     post 'addresses', to: 'users/registrations#create_address'
   end
+
+    # get 'patient_address', to: 'patients#new_patient_address'
+    # get 'patient_address', to: 'patients#create_patient_address'
+
   root to: "karutes#index"
-  resources :users, only: [:show] do
+  # resources :restaurants
+  #   namespace :admin do
+  resources :restaurants, only: [:show] 
+
+  resources :patients, only: [:new, :create, :show] do
+    resources :patient_addresses, shallow: true
     resources :karutes, shallow: true
   end
 

@@ -1,6 +1,6 @@
 class KarutesController < ApplicationController
   def index
-    @users = User.all
+    @patients = Patient.all
     # where.not(id: current_user.id) 
     # .all
   end
@@ -12,9 +12,9 @@ class KarutesController < ApplicationController
 
   def create
     @karute = Karute.new(karute_params)
-    @karute.user_id = params[:user_id]
+    @karute.patient_id = params[:patient_id]
     if @karute.save
-      redirect_to user_path(@karute.user_id)
+      redirect_to patient_path(@karute.patient_id)
     else
       render :new
     end
@@ -22,7 +22,7 @@ class KarutesController < ApplicationController
 
   def edit
     @karute = Karute.find(params[:id])
-    @karute.user_id = params[:user_id]
+    @karute.patient_id = params[:patient_id]
   end
 
   def update
