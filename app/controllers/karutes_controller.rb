@@ -1,4 +1,42 @@
 class KarutesController < ApplicationController
   def index
+    @patients = Patient.all
+    # where.not(id: current_user.id) 
+    # .all
+  end
+
+  def new
+    @karute = Karute.new
+
+  end
+
+  def create
+    @karute = Karute.new(karute_params)
+    @karute.patient_id = params[:patient_id]
+    if @karute.save
+      redirect_to patient_path(@karute.patient_id)
+    else
+      render :new
+    end
+  end
+
+  def edit
+    @karute = Karute.find(params[:id])
+    @karute.patient_id = params[:patient_id]
+  end
+
+  def update
+    @karute = Karute.find(params[:id])
+    if @karute.update(karute_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+      
+  private
+
+  def karute_params
+    params.require(:karute).permit(:pain, :illness, :history, :medicine, :habit, :memo, :date)
   end
 end

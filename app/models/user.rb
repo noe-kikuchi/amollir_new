@@ -14,4 +14,5 @@ class User < ApplicationRecord
     validates :phone_number, format: { with: /\A\d{11}\z/ }
   end
   has_one :address
+  # has_one :karute
 end

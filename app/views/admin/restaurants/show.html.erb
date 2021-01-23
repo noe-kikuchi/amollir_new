@@ -1,0 +1,107 @@
+<div class="user_karute_body">
+  <div class="top_back_btn">
+    <%= link_to '一覧に戻る', root_path %>
+  </div>  
+  <% unless @user.karute.present?%> 
+    <div class="new_karute_btn">
+      <p>カルテがありません</p>
+      <%= link_to 'カルテを追加', new_user_karute_path(@user.id), method: :get %>
+    </div>
+  <% else %> 
+    <div class="edit_karute_btn">
+      <%= link_to 'カルテを編集', edit_karute_path(@user.karute.id), method: :get %>
+    </div>  
+    <h2 class="page-heading"><%= "#{@user.family_name}#{@user.first_name}さんのカルテ"%></h2>
+
+    <div class="date">
+      <p>＜更新日＞</p>
+      <%= @user.karute.date %>
+    </div>
+    <div class="name">
+      <p>＜氏名＞</p>
+      <div class="kana">
+        <%= "#{@user.family_name_kana}#{@user.first_name_kana}" %>
+      </div>
+      <div class="kanji">
+        <%= "#{@user.family_name}#{@user.first_name}" %>
+      </div>  
+    </div>
+
+    <div class="birth">
+      <p>＜誕生日＞</p>
+      <%= "#{@user.birth_date_id}生" %>
+    </div>
+
+    <div class="address_space">
+      <p>＜住所＞</p>
+      <div class="postal_code">
+        <%= "〒#{@user.address.postal_code}" %>
+      </div>
+
+      <div class="address">
+        <%= @user.address.prefecture %>
+        <%= @user.address.city %>
+        <%= @user.address.address %>
+        <%= @user.address.building_name %>
+      </div>
+    </div>
+    
+    <div class="phone_number">
+      <p>＜電話番号＞</p>
+      <%= @user.phone_number %>
+    </div>
+
+    
+
+    <div class="user_karute">
+        <div class="pain">
+          <div class="item">
+          ＜痛みのある部位＞
+          </div>
+          <%= @user.karute.pain %>
+        </div>
+        <div class="illness">
+          <div class="item">
+          ＜既往症＞
+          </div>
+          <%= @user.karute.illness %>
+        </div>
+
+        <div class="history">
+          <div class="item">
+          ＜通院歴＞
+          </div>
+          <%= @user.karute.history %>
+        </div>
+
+        <div class="medicine">
+          <div class="item">
+          ＜服用している薬＞
+          </div>
+          <%= @user.karute.medicine %>
+        </div>
+
+        <div class="habit">
+          <div class="item">
+          ＜日常的に行っている行動＞
+          </div>
+          <%= @user.karute.habit %>
+        </div>
+        <div class="memo">
+          <div class="item">
+          ＜メモ＞
+          </div>
+          <%= @user.karute.memo %>
+        </div>
+    </div>
+  <% end %>
+</div>  
+
+
+
+
+
+
+
+
+

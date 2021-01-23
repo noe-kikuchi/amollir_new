@@ -12,14 +12,14 @@
   width: 300px;
 }  
 
-ul{
+.header_list{
   display: flex;
   justify-content: space-around;
   list-style: none;
   min-width: 200px;
 }
 
-li{
+.menu_list{ 
   font-size: 20px;
   margin-right: 20px;
   
