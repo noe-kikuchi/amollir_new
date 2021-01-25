@@ -17,6 +17,7 @@ class PatientAddressesController < ApplicationController
 
   def edit
     @patient_address = PatientAddress.find(params[:id])
+    @patient_address.patient_id = params[:patient_id]
   end
 
   def update

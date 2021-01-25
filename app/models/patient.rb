@@ -1,6 +1,6 @@
 class Patient < ApplicationRecord
-  has_one :karute
-  has_one :patient_address
+  has_one :karute, dependent: :destroy
+  has_one :patient_address, dependent: :destroy
 
   with_options presence: true do
     validates :family_name, format: { with: /\A[ぁ-んァ-ン一-龥]/ }

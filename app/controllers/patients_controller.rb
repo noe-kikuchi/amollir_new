@@ -35,6 +35,15 @@ class PatientsController < ApplicationController
     @patients = Patient.search(params[:keyword])
   end
 
+  def destroy
+    @patient = Patient.find(params[:id])
+    if @patient.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
 
   private
 
