@@ -1,4 +1,6 @@
 class KarutesController < ApplicationController
+  before_action :if_not_admin, except: [:index]
+  
   def index
     @patients = Patient.all
     # where.not(id: current_user.id) 
@@ -39,4 +41,9 @@ class KarutesController < ApplicationController
   def karute_params
     params.require(:karute).permit(:pain, :illness, :history, :medicine, :habit, :memo, :date)
   end
+
+  def if_not_admin
+    redirect_to root_path unless current_user && current_user.admin?
+  end
+
 end
