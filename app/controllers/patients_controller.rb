@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-   before_action :if_not_admin
+  before_action :if_not_admin
 
   def new
     @patient = Patient.new
@@ -7,12 +7,6 @@ class PatientsController < ApplicationController
 
   def create
     @patient = Patient.new(patient_params)
-    # unless @patient.valid?
-    #   render :new and return
-    # end
-    # session["patient_data"] = {patient: @patient.attributes}
-    # @patient_address = @patient.build_patient_address
-    # render :new_patient_address
     if @patient.save
       redirect_to root_path
     else
@@ -37,6 +31,11 @@ class PatientsController < ApplicationController
     end
   end
 
+  def search
+    @patients = Patient.search(params[:keyword])
+  end
+
+
   private
 
   def patient_params
@@ -49,4 +48,3 @@ class PatientsController < ApplicationController
 
 end
 
-# <% if current_user && current_user.admin? %>

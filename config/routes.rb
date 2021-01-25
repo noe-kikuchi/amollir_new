@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   resources :patients, only: [:new, :create, :show, :edit, :update] do
     resources :patient_addresses, shallow: true
     resources :karutes, shallow: true
+    collection do
+      get 'search'
+    end
   end
 
   resources :menus, only: [:index]
