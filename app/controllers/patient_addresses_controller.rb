@@ -9,7 +9,7 @@ class PatientAddressesController < ApplicationController
     @patient_address = PatientAddress.new(patient_address_params)
     @patient_address.patient_id = params[:patient_id]
     if @patient_address.save
-      redirect_to root_path
+      redirect_to patient_path(@patient_address.patient_id)
     else
       render :new
     end
@@ -23,7 +23,7 @@ class PatientAddressesController < ApplicationController
   def update
     @patient_address = PatientAddress.find(params[:id])
     if @patient_address.update(patient_address_params)
-      redirect_to patient_path
+      redirect_to patient_path(@patient_address.patient_id)
     else
       render :edit
     end

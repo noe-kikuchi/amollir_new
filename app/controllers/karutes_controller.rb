@@ -30,7 +30,7 @@ class KarutesController < ApplicationController
   def update
     @karute = Karute.find(params[:id])
     if @karute.update(karute_params)
-      redirect_to root_path
+      redirect_to patient_path(@karute.patient_id)
     else
       render :edit
     end
