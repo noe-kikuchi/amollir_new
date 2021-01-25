@@ -2,7 +2,7 @@ class KarutesController < ApplicationController
   before_action :if_not_admin, except: [:index]
   
   def index
-    @patients = Patient.all
+    @patients = Patient.order :family_name_kana, :first_name_kana
     # where.not(id: current_user.id) 
     # .all
   end
