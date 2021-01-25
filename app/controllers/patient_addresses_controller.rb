@@ -15,6 +15,19 @@ class PatientAddressesController < ApplicationController
     end
   end
 
+  def edit
+    @patient_address = PatientAddress.find(params[:id])
+  end
+
+  def update
+    @patient_address = PatientAddress.find(params[:id])
+    if @patient_address.update(patient_address_params)
+      redirect_to patient_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def patient_address_params

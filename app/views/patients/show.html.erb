@@ -17,7 +17,7 @@
     <% else %> 
       <div class="edit_karute_btn">
         <%= link_to '患者情報（電話番号等）を修正', edit_patient_path(@patient.karute.id), method: :get %>
-        <%= link_to '住所を編集', edit_karute_path(@patient.karute.id), method: :get %>
+        <%= link_to '住所を修正', edit_patient_address_path(@patient.karute.id), method: :get %>
         <%= link_to 'カルテを編集', edit_karute_path(@patient.karute.id), method: :get %>
       </div>  
       <h2 class="page-heading"><%= "#{@patient.family_name}#{@patient.first_name}さんのカルテ"%></h2>
