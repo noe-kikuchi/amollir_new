@@ -1,5 +1,5 @@
 .top-page-header{
-  background-color: #F5F5DC;
+  /* background-color: #F5F5DC; */
   height: 150px;
   width: 100vw;
   display: flex;
@@ -19,38 +19,63 @@
   min-width: 200px;
 }
 
-.menu_list{ 
+/* .menu_list{ 
   font-size: 20px;
   margin-right: 20px;
-  
-/* border: 1px　solid #339933; */
-/* font-family: 'Sawarabi Mincho', sans-serif; */
+} */
+
+
+
+h1:after {
+  margin-top: 10px;
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, #FFFF77, rgb(212, 198, 71, 0.897) );
+  background: linear-gradient(to right, #FFFF77, rgb(212, 198, 71, 0.897) );
 }
 
-.course-list{
-  text-decoration: none;
-  color: #339933;
+ul.header_list{
+  counter-reset:list;
+  list-style-type:none;
+  font: 20px/1.6 'arial narrow', sans-serif;
+  padding:0;
 }
 
-.shop-list{
+ul.header_list,ul.header_list a{
   text-decoration: none;
+  position:relative;
   color: #339933;
+  padding: 0 0 0 23px;
+  margin: 7px 0px;
+  line-height: 30px;
+  /* border-bottom: dashed 1px #ccc; */
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  margin-right: 20px;
+}
+ul.header_list li:before{
+  counter-increment: list;
+  /* content: counter(list) "."; */
+  text-decoration: none;
+
+  display: block;
+  position: absolute;
+  left: 0px;
+  font-weight: bold;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+ul.header_list li:hover,
+ul.header_list li:hover:before{
+  font-size: 30px;
+  color: #CCCC99;
 }
 
-.access-list{
-  text-decoration: none;
-  color: #339933;
-}
-.blog-list{
-  text-decoration: none;
-  color: #339933;
-}
-.inquiry-list{
-  text-decoration: none;
-  color: #339933;
-}
-
-.admin-list{
-  text-decoration: none;
-  color: #339933;
-}

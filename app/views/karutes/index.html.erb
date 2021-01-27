@@ -10,21 +10,23 @@
         
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log_out_btn" %>
         <%= link_to '患者登録', new_patient_path, class: "admin_btn" %>
-        <%= form_with(url: search_patients_path, local: true, method: :get, class: "search-form") do |form| %>
-          <%= form.text_field :keyword, placeholder: "名前、電話番号から検索", class: "search-input" %>
-          <%= form.submit "検索", class: "search-btn" %>
-        <% end %>
+        <div class="search">
+          <%= form_with(url: search_patients_path, local: true, method: :get, class: "search-form") do |form| %>
+            <%= form.text_field :keyword, placeholder: "名前、電話番号から検索", class: "search-input" %>
+            <%= form.submit "検索", class: "search-btn" %>
+          <% end %>
+        </div>  
 
       </div>  
 
       <div class="karute_user">
-        <h2>患者カルテ一覧</h2>
+        <h2 class=k_title>患者カルテ一覧</h2>
         <ul class='user_list'>
           <% @patients.each do |patient| %>
-            <li class='list'>
+            <li class='u_list'>
                 <%= link_to patient_path(patient.id), method: :get do %> 
-                <%= patient.family_name %>
-                <%= patient.first_name %>
+                <span class="user_li"><%= patient.family_name %>
+                <%= patient.first_name %></span>
                 <% end %>
             </li>
           <% end %>
@@ -32,12 +34,63 @@
       </div> 
     <% else %> 
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log_out_btn" %>
- 
     <% end %>
+  <% else %>  
+    <div class="image1-1">
+      <div class="image1">
+        <%= image_tag("image_top.png", class:"amollir_top_image") %> 
+        <div class="image1_comment">
+          <h2>一人一人に合ったオールハンド施術</h2>
+          <h2>身体に溜まった老廃物を流し出す</h2>
+        </div>  
+      </div>
+    </div> 
+    <div class="top_message">   
+      <h1></h1>
+        <p class="amollir_comment_top">Amollir       "あもりーる"</p>
+        <p class="amollir_comment">フランス語で、「柔らかくなる」という意味の他に「和む、癒し」などの意味もあります。</p>
+        <p class="amollir_comment">患者様一人ひとりの身体のお悩みに向き合い、心も身体も癒されるような空間、施術を目指しております。</p>
+        <p class="amollir_comment">女性整体師ならではの、心のこもったオールハンド施術をご堪能していただければと思います。</p>
+      <h1></h1>
+    </div>   
+    <div class="image1-2">
+      <%= image_tag("image_top2.png", class:"amollir_top_image2-1") %> 
+      <div class="image2_coment">
+        <%= image_tag("image_top_waku.png", class:"amollir_top_image2-2") %> 
+      </div>
+    </div>
+
+    <div class='top-page-fotter'>
+      <h2 class="fotter_title">
+        <i class="far fa-lightbulb"></i>
+        <span>
+          <p class="shop_name_hutter">ボディーバランスケア Amollir -あもりーる-</p>
+          <p class="shop_time">営業時間</p>
+          <p class="shop_time">午前９時～午後７時（最終受付）</p>
+          <p class="shop_time">年末年始休業</p>
+          <p class="shop_time">毎週土曜日は宇和店のため松山店休業</p>
+        </span> 
+      </h2>
+    </div>  
+  <div class="admin_b">
+    <%= link_to '@管理者', new_user_session_path, class: "admin-list" %>
+  </div> 
+
+    <div class="tell">
+      <h3 title="tell_coment">ご予約<p class="tell_number">089-904-7180</p><p>※非通知は繋がりません</p></h3>
+      <%# <span class='purchase-btn-text'>要予約: 089-904-7180</span>
+      <p><span class='purchase-btn-text2'>※ 非通知は繋がりません</span></p> %>
+      <%# <%= image_tag 'tell.png', size: '250x105', class: "tell-btn-icon" %> 
+    </div> 
+    <div class="top_acsess">
+    </div>
+     
   <% end %>
+
+  
+
 </div>
 
-<h2>一人一人に合ったオールハンド施術</h2>
-<h2>身体に溜まった老廃物を流し出す</h2>
+
 
 
