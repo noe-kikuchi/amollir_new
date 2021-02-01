@@ -32,9 +32,7 @@
   text-align: center;
   width: 80%;
   margin: 0 auto;
-  /* border: 2px solid #EDFFBE; */
   display: flex;
-  /* text-align: right} */
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
 .s_t{
@@ -97,7 +95,7 @@
 .user_karute{
   /* /* width: 60%; */
   margin: 20px auto;
-  /* border: 2px solid #EDFFBE; */ */
+  /* border: 2px solid #EDFFBE; */ 
 }
 
 .pain{
