@@ -1,7 +1,5 @@
 <div class="user_karute_body">
   <div class="top_back_btn">
-    <%# <%= link_to '住所追加', new_patient_patient_address_path(@patient.id) %>
-    <%# <%= link_to 'カルテ追加', new_patient_karute_path(@patient.id) %>
     <%= link_to '一覧に戻る', root_path %>
   </div>  
   <% unless @patient.patient_address.present?%>
@@ -16,89 +14,131 @@
       </div>
     <% else %> 
       <div class="edit_karute_btn">
-        <%= link_to 'カルテを編集', edit_karute_path(@patient.karute.id), method: :get %>
+        <div class="edit_k_btn">
+          <%= link_to '患者情報(電話番号等)を修正', edit_patient_path(@patient.id), method: :get %>
+        </div> 
+        <div class="edit_k_btn">
+          <%= link_to '住所を修正', edit_patient_address_path(@patient.patient_address.id), method: :get %>
+        </div> 
+        <div class="edit_k_btn"> 
+          <%= link_to 'カルテを編集', edit_karute_path(@patient.karute.id), method: :get %>
+        </div> 
+        <div class="edit_k_btn"> 
+          <%= link_to '患者情報を削除', patient_path(@patient.id), method: :delete %>
+        </div>
       </div>  
       <h2 class="page-heading"><%= "#{@patient.family_name}#{@patient.first_name}さんのカルテ"%></h2>
 
       <div class="date">
-        <p>＜更新日＞</p>
-        <%= @patient.karute.date %>
-      </div>
-      <div class="name">
-        <p>＜氏名＞</p>
-        <div class="kana">
-          <%= "#{@patient.family_name_kana}#{@patient.first_name_kana}" %>
-        </div>
-        <div class="kanji">
-          <%= "#{@patient.family_name}#{@patient.first_name}" %>
-        </div>  
-      </div>
+        <p style="text-align: right">
+            更新日:  
+            <%= @patient.karute.date %>
+        </p>
+      </div>  
 
-      <div class="birth">
-        <p>＜誕生日＞</p>
-        <%= "#{@patient.birth_date_id}生" %>
-      </div>
-
-      <div class="address_space">
-        <p>＜住所＞</p>
-        <div class="postal_code">
-          <%= "〒#{@patient.patient_address.postal_code}" %>
+      <div class="pro">
+        <div class="name">
+          <div class="s_t">
+            氏名
+          </div>
+          <div class="s_t2">
+            <div class="kana">
+              <%= "#{@patient.family_name_kana}#{@patient.first_name_kana}" %>
+            </div>
+            <div class="kanji">
+              <%= "#{@patient.family_name}#{@patient.first_name}" %>
+            </div>
+          </div>    
         </div>
 
-        <div class="address">
-          <%= @patient.patient_address.prefecture.name %>
-          <%= @patient.patient_address.city %>
-          <%= @patient.patient_address.address %>
-          <%= @patient.patient_address.building_name %>
+        <div class="birth">
+          <div class="s_t">
+            誕生日
+          </div>
+          <div class="s_t2">  
+            <%= "#{@patient.birth_date_id}生" %>
+          </div>
+        </div>
+
+        <div class="address_space">
+          <div class="s_t">
+            住所
+          </div>
+          <div class="s_t2">    
+            <div class="postal_code">
+              <%= "〒#{@patient.patient_address.postal_code}" %>
+            </div>  
+            <div class="address">
+              <%= @patient.patient_address.prefecture.name %>
+              <%= @patient.patient_address.city %>
+              <%= @patient.patient_address.address %>
+              <%= @patient.patient_address.building_name %>
+            </div>
+          </div>  
+        </div>
+        
+        <div class="phone_number">
+          <div class="s_t">
+            電話番号
+          </div>
+          <div class="s_t2"> 
+            <%= @patient.phone_number %>
+          </div>  
         </div>
       </div>
-      
-      <div class="phone_number">
-        <p>＜電話番号＞</p>
-        <%= @patient.phone_number %>
-      </div>
-
       
 
       <div class="user_karute">
           <div class="pain">
-            <div class="item">
-            ＜痛みのある部位＞
+            <div class="s_t">
+              痛みのある部位
             </div>
-            <%= @patient.karute.pain %>
+            <div class="s_t2"> 
+              <%= @patient.karute.pain %>
+            </div>  
           </div>
           <div class="illness">
-            <div class="item">
-            ＜既往症＞
+            <div class="s_t">
+              既往症
             </div>
-            <%= @patient.karute.illness %>
+            <div class="s_t2"> 
+              <%= @patient.karute.illness %>
+            </div>  
           </div>
 
           <div class="history">
-            <div class="item">
-            ＜通院歴＞
+            <div class="s_t">
+              通院歴
             </div>
-            <%= @patient.karute.history %>
+            <div class="s_t2"> 
+              <%= @patient.karute.history %>
+            </div>  
           </div>
 
           <div class="medicine">
-            <div class="item">
-            ＜服用している薬＞
+            <div class="s_t">
+              服用している薬
             </div>
-            <%= @patient.karute.medicine %>
+            <div class="s_t2"> 
+              <%= @patient.karute.medicine %>
+            </div>  
           </div>
 
           <div class="habit">
-            <div class="item">
-            ＜日常的に行っている行動＞
+            <div class="s_t">
+              日常的に行っている行動
             </div>
-            <%= @patient.karute.habit %>
+            <div class="s_t2">
+              <%= @patient.karute.habit %>
+            </div>  
           </div>
           <div class="memo">
-            <div class="item">
-            ＜メモ＞
+            <div class="s_t">
+              メモ
             </div>
-            <%= @patient.karute.memo %>
+            <div class="s_t2"> 
+              <%= @patient.karute.memo %>
+            </div>  
           </div>
       </div>
     <% end %>

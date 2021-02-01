@@ -1,0 +1,87 @@
+.access_top{
+  font-size: 40px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  text-align: center;
+  color: #339933;
+  margin-top: 30px;
+}
+.accses_syousai{
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center; */
+  /* margin-top: 30px; */
+  width: 80vw;
+  margin: 30px auto 0;
+}
+.shop_address{
+  border: 3px solid #CCCC66;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
+.accsses_title{
+  margin:  0;             /* デフォルトCSS打ち消し */
+  position:  relative;    /* 位置調整 */
+  font-weight:  normal;   /* 文字の太さ調整 */
+  margin-bottom: 15px;    /* 周りの余白指定 */
+  font-size:  30px;       /* 文字サイズ指定 */
+  border-bottom:  solid #CCCC66;  /* 線指定 */
+  color: #339933;
+  text-align: center;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.head_test-point {
+  font-size: 20px;        /* 文字サイズ指定 */
+  margin-left:  10px;     /* 周りの余白指定 */
+  color: #339933;
+  text-align: center;
+}
+
+.a_comment{
+  margin:  0;             /* デフォルトCSS打ち消し */
+  line-height: 2;         /* 行間調整 */
+  font-size: 18px;
+  /* color: #339933; */
+}
+
+.a_comment1{
+  margin:  0;             /* デフォルトCSS打ち消し */
+  line-height: 2;         /* 行間調整 */
+  font-size: 22px;
+  /* color: #339933; */
+}
+
+.a_coment2{
+  margin-top: 20px;
+}
+
+.shop_map{
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+.shop_map_coment{
+  border: 3px solid #CCCC66;
+  padding: 20px;
+  text-align: center;
+  margin: 30px auto 160px;
+
+}
+
+.tell{
+  bottom: 50px;
+  right: 32px;
+  position: fixed;
+  height: 105px;
+  width: 300px;
+  z-index: 2;
+}
+
+.tell_number{
+  font-size: 30px;
+  z-index: 1;
+}
+

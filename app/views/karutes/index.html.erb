@@ -6,22 +6,27 @@
   <% if user_signed_in?%>
     <% if current_user.admin? %>
       <div class="tab">
-        <h2>一覧は管理者のみ表示されます</h2>
+        <h2 class="iti">一覧は管理者のみ表示されます</h2>
         
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log_out_btn" %>
-        <%# <%= link_to 'ユーザー情報管理ページ', rails_admin_path, class: "admin_btn" %>
         <%= link_to '患者登録', new_patient_path, class: "admin_btn" %>
+        <div class="search">
+          <%= form_with(url: search_patients_path, local: true, method: :get, class: "search-form") do |form| %>
+            <%= form.text_field :keyword, placeholder: "名前、電話番号から検索", class: "search-input" %>
+            <%= form.submit "検索", class: "search-btn" %>
+          <% end %>
+        </div>  
 
       </div>  
 
       <div class="karute_user">
-        <h2>患者カルテ一覧</h2>
+        <h2 class=k_title>患者カルテ一覧</h2>
         <ul class='user_list'>
           <% @patients.each do |patient| %>
-            <li class='list'>
+            <li class='u_list'>
                 <%= link_to patient_path(patient.id), method: :get do %> 
-                <%= patient.family_name %>
-                <%= patient.first_name %>
+                <span class="user_li"><%= patient.family_name %>
+                <%= patient.first_name %></span>
                 <% end %>
             </li>
           <% end %>
@@ -29,13 +34,57 @@
       </div> 
     <% else %> 
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log_out_btn" %>
- 
     <% end %>
+  <% else %>  
+    <div class="image1-1">
+      <div class="image1">
+        <%= image_tag("image_top.png", class:"amollir_top_image") %> 
+        <div class="image1_comment">
+          <h2>一人一人に合ったオールハンド施術</h2>
+          <h2>身体に溜まった老廃物を流し出す</h2>
+        </div>  
+      </div>
+    </div> 
+    <div class="top_message">   
+      <h1></h1>
+        <p class="amollir_comment_top">Amollir       "あもりーる"</p>
+        <p class="amollir_comment">フランス語で、「和らぐ」という意味の他に「柔らかくなる、癒し」などの意味もあります。</p>
+        <p class="amollir_comment">あなたの身体の痛みと心の疲れを和らげる癒やしのサロンでありたいと思っています。</p>
+        <p class="amollir_comment">身体のお悩みに合わせたきめ細かい施術と、心のこもったサービスを提供させて頂けるよう、日々目指しております。</p>
+      <h1></h1>
+    </div>   
+    <div class="image1-2">
+      <%= image_tag("image_top2.png", class:"amollir_top_image2-1") %> 
+      <div class="image2_coment">
+        <%= image_tag("image_top_waku.png", class:"amollir_top_image2-2") %> 
+      </div>
+    </div>
+
+    <div class='top-page-fotter'>
+      <h2 class="fotter_title">
+        <i class="far fa-lightbulb"></i>
+        <span>
+          <p class="shop_name_hutter">ボディーバランスケア Amollir -あもりーる-</p>
+          <p class="shop_time">営業時間</p>
+          <p class="shop_time">午前９時～午後７時（最終受付）</p>
+          <p class="shop_time">年末年始休業</p>
+          <p class="shop_time">毎週土曜日は宇和店のため松山店休業</p>
+        </span> 
+      </h2>
+    </div>  
+
+    <div class="tell">
+      <h3 title="tell_coment">ご予約<p class="tell_number">089-904-7180</p><p>※非通知は繋がりません</p></h3>
+    </div> 
+    <div class="top_acsess">
+    </div>
+     
   <% end %>
+
+  
+
 </div>
 
-<h2>一人一人に合ったオールハンド施術</h2>
-<h2>身体に溜まった老廃物を流し出す</h2>
 
 
-<%# <%= link_to user_karute_path(user.id), method: :get do %>
+

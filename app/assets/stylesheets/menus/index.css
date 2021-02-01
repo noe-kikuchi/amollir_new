@@ -1,12 +1,35 @@
 .menu-top{
+  
   color: #339933;
   text-align: center;
   font-size: 40px;
-  /* font-family: Monsieur La Doulaise; */
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px #CCCC66;
+  border-bottom: solid 2px #CCCC66;
+  width: 80vw;
+  margin: 20px auto 0;
+}
+
+.menu-top:before, .menu-top:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: #CCCC66;
+}
+
+.menu-top:before {
+  left: 7px;
+}
+.menu-top:after {
+  right: 7px;
 }
 
 .menu-body{
-  background-color: #F3FFD8;
 }
 
 .menu{
@@ -15,7 +38,9 @@
 
 .sub{
   font-size: 15px;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
+
 
 li{
   list-style: none;
@@ -24,6 +49,10 @@ li{
 .menu_title{
   font-size: 20px;
   color: #339933;
+  width: 80%;
+  margin: 20px auto;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
 }
 
 .pull-down-list{
@@ -31,7 +60,13 @@ li{
   width: 80%;
   margin: 20px auto;
   padding: 20px;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  padding:10px;
+	font-size:20px;
+	border:2px solid#CCCC66;
+	border-radius: 20px 10px 40px 15px/50px 40px 10px 20px;
 }
+
 
 .menu1{
   margin-top: 20px;
@@ -72,8 +107,23 @@ li{
 .menu10{
   margin-top: 20px;
   padding-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .hidden{
   display: none;
+}
+
+.tell{
+  bottom: 50px;
+  right: 32px;
+  position: fixed;
+  height: 105px;
+  width: 300px;
+  z-index: 2;
+}
+
+.tell_number{
+  font-size: 30px;
+  z-index: 1;
 }

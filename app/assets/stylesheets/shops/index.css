@@ -1,0 +1,65 @@
+.gaikan {
+  display: flex;
+  margin: 20px auto 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.matiai{
+  display: flex;
+  margin: 20px auto 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sezyutu{
+  display: flex;
+  margin: 20px auto 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shop_image{
+  width: 50vw;
+}
+
+.shop_coment{
+  width: 40vw;
+  text-align: center;
+  border: 3px solid #CCCC66;
+  padding: 20px;
+  color: #339933;
+}
+
+.midasi{
+  margin:  0;        
+  font-size:  24px;    
+  border-bottom:  solid #CCCC66;  
+  padding-bottom:  5px;  
+  margin-bottom: 15px;   
+}
+
+.shop_coment p {
+  margin:  0;            
+  line-height: 2;
+  font-size: 18px;         
+}
+
+.sezyutu_image{
+  width: 48vw;
+  margin-bottom: 180px;
+}
+
+.tell{
+  bottom: 50px;
+  right: 32px;
+  position: fixed;
+  height: 105px;
+  width: 300px;
+  z-index: 2;
+}
+
+.tell_number{
+  font-size: 30px;
+  z-index: 1;
+}

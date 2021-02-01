@@ -1,0 +1,40 @@
+
+<%= render "karutes/header"%>
+
+<div class="admin">
+
+  <%# <% if user_signed_in?%>
+    <%# <% if current_user.admin? %>
+      <div class="tab">
+        <h2>一覧は管理者のみ表示されます</h2>
+        
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log_out_btn" %>
+        <%# <%= link_to 'ユーザー情報管理ページ', rails_admin_path, class: "admin_btn" %>
+        <%= link_to '患者登録', new_patient_path, class: "admin_btn" %>
+
+      </div>  
+
+      <div class="karute_user">
+        <h2>患者カルテ一覧</h2>
+        <%= form_with(url: search_patients_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+          <%= form.submit "検索", class: "search-btn" %>
+        <% end %>
+        <ul class='user_list'>
+          <% @patients.each do |patient| %>
+            <li class='list'>
+                <%= link_to patient_path(patient.id), method: :get do %> 
+                <%= patient.family_name %>
+                <%= patient.first_name %>
+                <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div> 
+    <%# <% else %> 
+      <%# <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log_out_btn" %>
+ 
+    <%# <% end %> 
+  <%# <% end %>
+</div>
+

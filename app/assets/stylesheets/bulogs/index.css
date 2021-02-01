@@ -1,5 +1,6 @@
 .blog_link{
   text-align: center;
+  margin-bottom: 180px;
 }
 
 .insta{
@@ -18,4 +19,45 @@
   height: 100px;
   width: 100px;
   margin: 50px auto 0;
+}
+
+.b_comment{
+  margin-top: 50px;
+  font-size: 30px;
+  color: #339933;
+  animation: flash 1s linear infinite;
+}
+
+.g{
+  color: #CCCC66;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.tell{
+  bottom: 50px;
+  right: 32px;
+  position: fixed;
+  height: 105px;
+  width: 300px;
+  z-index: 2;
+}
+
+.tell_number{
+  font-size: 30px;
+  z-index: 1;
 }

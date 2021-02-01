@@ -1,0 +1,144 @@
+.top_back_btn{
+  text-align: center;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.new_karute_btn{
+  text-align: center;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.edit_karute_btn{
+  text-align: center;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+.edit_k_btn{
+}
+
+.user_karute_body{
+  width: 80%;
+  border: 5px solid #CCCC66;;
+  margin: auto;
+  padding: 20px 0 20px;
+}
+
+.page-heading{
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.date{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  /* border: 2px solid #EDFFBE; */
+  display: flex;
+  /* text-align: right} */
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+.s_t{
+  border: 2px solid #339933;;
+  width: 35%;
+  padding: 10px 0;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.s_t2{
+  border: 2px solid #339933;;
+  width: 75%;
+  padding: 10px 0;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.name{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.kana{
+  font-size: 12px;
+}
+
+.birth{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.address_space{
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.postal_code{
+  text-align: center;
+  font-size: 12px;
+}
+
+.address{
+  text-align: center;
+}
+
+.phone_number{
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.user_karute{
+  /* /* width: 60%; */
+  margin: 20px auto;
+  /* border: 2px solid #EDFFBE; */ */
+}
+
+.pain{
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.illness{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.history{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.medicine{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.habit{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.memo{
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}

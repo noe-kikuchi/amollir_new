@@ -3,11 +3,11 @@ function menu() {
   const pullDown1 = document.getElementById("menu1")
 
   menu_btn1.addEventListener("mouseover", function(){
-    this.setAttribute("style", "border-bottom:1px solid #339933;;")
+    this.setAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
 
   menu_btn1.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "border-bottom:1px solid #339933;;")
+    this.removeAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
   
   menu_btn1.addEventListener('click', function() {
@@ -22,11 +22,11 @@ function menu() {
   const pullDown2 = document.getElementById("menu2")
 
   menu_btn2.addEventListener("mouseover", function(){
-    this.setAttribute("style", "border-bottom:1px solid #339933;;")
+    this.setAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
 
   menu_btn2.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "border-bottom:1px solid #339933;;")
+    this.removeAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
   
   menu_btn2.addEventListener('click', function() {
@@ -41,11 +41,11 @@ function menu() {
   const pullDown3 = document.getElementById("menu3")
 
   menu_btn3.addEventListener("mouseover", function(){
-    this.setAttribute("style", "border-bottom:1px solid #339933;;")
+    this.setAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
 
   menu_btn3.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "border-bottom:1px solid #339933;;")
+    this.removeAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
   
   menu_btn3.addEventListener('click', function() {
@@ -60,11 +60,11 @@ function menu() {
   const pullDown4 = document.getElementById("menu4")
 
   menu_btn4.addEventListener("mouseover", function(){
-    this.setAttribute("style", "border-bottom:1px solid #339933;;")
+    this.setAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
 
   menu_btn4.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "border-bottom:1px solid #339933;;")
+    this.removeAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
   
   menu_btn4.addEventListener('click', function() {
@@ -79,11 +79,11 @@ function menu() {
   const pullDown5 = document.getElementById("menu5")
 
   menu_btn5.addEventListener("mouseover", function(){
-    this.setAttribute("style", "border-bottom:1px solid #339933;;")
+    this.setAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
 
   menu_btn5.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "border-bottom:1px solid #339933;;")
+    this.removeAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
   
   menu_btn5.addEventListener('click', function() {
@@ -98,11 +98,11 @@ function menu() {
   const pullDown6 = document.getElementById("menu6")
 
   menu_btn6.addEventListener("mouseover", function(){
-    this.setAttribute("style", "border-bottom:1px solid #339933;;")
+    this.setAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
 
   menu_btn6.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "border-bottom:1px solid #339933;;")
+    this.removeAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
   
   menu_btn6.addEventListener('click', function() {
@@ -117,11 +117,11 @@ function menu() {
   const pullDown7 = document.getElementById("menu7")
 
   menu_btn7.addEventListener("mouseover", function(){
-    this.setAttribute("style", "border-bottom:1px solid #339933;;")
+    this.setAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
 
   menu_btn7.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "border-bottom:1px solid #339933;;")
+    this.removeAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
   
   menu_btn7.addEventListener('click', function() {
@@ -136,11 +136,11 @@ function menu() {
   const pullDown8 = document.getElementById("menu8")
 
   menu_btn8.addEventListener("mouseover", function(){
-    this.setAttribute("style", "border-bottom:1px solid #339933;;")
+    this.setAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
 
   menu_btn8.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "border-bottom:1px solid #339933;;")
+    this.removeAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
   
   menu_btn8.addEventListener('click', function() {
@@ -155,11 +155,11 @@ function menu() {
   const pullDown9 = document.getElementById("menu9")
 
   menu_btn9.addEventListener("mouseover", function(){
-    this.setAttribute("style", "border-bottom:1px solid #339933;;")
+    this.setAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
 
   menu_btn9.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "border-bottom:1px solid #339933;;")
+    this.removeAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
   
   menu_btn9.addEventListener('click', function() {
@@ -174,11 +174,11 @@ function menu() {
   const pullDown10 = document.getElementById("menu10")
 
   menu_btn10.addEventListener("mouseover", function(){
-    this.setAttribute("style", "border-bottom:1px solid #339933;;")
+    this.setAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
 
   menu_btn10.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "border-bottom:1px solid #339933;;")
+    this.removeAttribute("style", "border-bottom:1px solid #CCCC66;;")
   })
   
   menu_btn10.addEventListener('click', function() {

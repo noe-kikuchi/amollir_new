@@ -1,0 +1,42 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       family_name: 苗字
+       first_name: 名前
+       family_name_kana: 苗字のフリガナ
+       first_name_kana: 名前のフリガナ
+       birth_date_id: 誕生日
+       email: Eメール
+       password: パスワード
+       phone_number: 電話番号
+     address:
+       postal_code: 郵便番号
+       prefecture: 都道府県
+       city: 市町村
+       address: 番地
+       building_name: 建物名
+     patient:
+       family_name: 苗字
+       first_name: 名前
+       family_name_kana: 苗字のフリガナ
+       first_name_kana: 名前のフリガナ
+       birth_date_id: 誕生日
+       email: Eメール
+       password: パスワード
+       phone_number: 電話番号
+     patient_address:
+       postal_code: 郵便番号
+       prefecture_id: 都道府県
+       city: 市町村
+       address: 番地
+       building_name: 建物名
+     karute:
+       pain: 痛みのある部位
+       illness: 既往症
+       history: 通院歴
+       medicine: 服用薬
+       habit: 日常的に行っている行動
+       memo: メモ
+       date: 作成日
+       

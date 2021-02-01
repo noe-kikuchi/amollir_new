@@ -6,7 +6,7 @@ class CreateKarutes < ActiveRecord::Migration[6.0]
       t.string :history             
       t.string :medicine      
       t.string :habit
-      t.string :memo
+      t.text :memo
       t.string :date
       t.references :patient,         foreign_key: true
       t.timestamps

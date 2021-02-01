@@ -16,12 +16,17 @@ Rails.application.routes.draw do
   #   namespace :admin do
   resources :restaurants, only: [:show] 
 
-  resources :patients, only: [:new, :create, :show] do
+  resources :patients, only: [:new, :create, :show, :edit, :update, :destroy] do
     resources :patient_addresses, shallow: true
     resources :karutes, shallow: true
+    collection do
+      get 'search'
+    end
   end
 
   resources :menus, only: [:index]
   resources :bulogs, only: [:index]
   resources :accesses, only: [:index]
+  resources :shops, only: [:index]
+  resources :infomations, only: [:index]
 end

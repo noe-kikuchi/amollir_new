@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2021_01_23_064749) do
     t.string "history"
     t.string "medicine"
     t.string "habit"
-    t.string "memo"
+    t.text "memo"
     t.string "date"
     t.bigint "patient_id"
     t.datetime "created_at", precision: 6, null: false
