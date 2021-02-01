@@ -27,4 +27,6 @@ Rails.application.routes.draw do
   resources :menus, only: [:index]
   resources :bulogs, only: [:index]
   resources :accesses, only: [:index]
+  resources :shops, only: [:index]
+  resources :infomations, only: [:index]
 end

@@ -1,0 +1,67 @@
+.info-top{
+  font-size: 40px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  text-align: center;
+  color: #339933;
+  margin-top: 30px;
+}
+
+.DBC{
+  background-color: lightgray;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.DBC_title{
+  background-color: red;
+  text-align: center;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  color: #339933;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.DBC_memo{
+  background-color: lightgreen;
+  text-align: center;
+  margin-top: 20px;
+  border: 3px solid #CCCC66;
+  padding: 20px;
+  color: #339933;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
+}
+
+.DBC_comment{
+  background-color: lightblue;
+  margin-top: 20px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
+}
+
+.BDC_ap{
+  background-color: lightblue;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
+}
+
+.app{
+  color: red;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+
+}
+
+.BDC_moniter{
+  background-color: lightpink;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  margin-top: 20px;
+}
+
+.BDC_moniter_top{
+  text-align: center;
+  font-size: 20px;
+  background-color: lightcoral;
+  padding: 20px;
+}

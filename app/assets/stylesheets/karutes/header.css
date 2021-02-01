@@ -46,6 +46,7 @@ ul.header_list,ul.header_list a{
   text-decoration: none;
   position:relative;
   color: #339933;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
   padding: 0 0 0 23px;
   margin: 7px 0px;
   line-height: 30px;
@@ -79,3 +80,13 @@ ul.header_list li:hover:before{
   color: #CCCC99;
 }
 
+.admin-s{
+  text-align: right;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.admin-list{
+  color: rgb(163, 163, 163);
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}

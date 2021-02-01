@@ -3,16 +3,23 @@
   <div class='left-header'>
     <%= link_to image_tag("0.png", class:"amollir_logo"), "/" %> 
   </div>
-  <div class='right-header'>  
-    <ul class='header_list'>
-      <li class='menu_list'><%= link_to 'メニュー', menus_path, class: "course-list" %></li>
-      <li class='menu_list'><%= link_to '店の様子', "#", class: "shop-list" %></li>
-      <li class='menu_list'><%= link_to 'アクセス', accesses_path, class: "access-list" %></li>
-      <li class='menu_list'><%= link_to 'ブログ', bulogs_path, class: "blog-list" %></li>
-      <li class='menu_list'><%= link_to 'お問い合わせ', "#", class: "inquiry-list" %></li>
-      <%# <li class='menu_list'><%= link_to '（仮）管理者', new_user_session_path, class: "admin-list" %>
-      <%# <li ><%= link_to '（仮）管理者', rails_admin_path, class: "admin-list" %></li>
-    </ul>  
+  <div class='right-header'> 
+    <div class=right-top>
+      <div class="admin-s">
+          <%= link_to '@管理者', new_user_session_path, class: "admin-list" %>
+      </div>
+    </div>
+    <div class="rignt-bottom">
+      <ul class='header_list'>
+        <li class='menu_list'><%= link_to 'メニュー', menus_path, class: "course-list" %></li>
+        <li class='menu_list'><%= link_to '店の様子', shops_path, class: "shop-list" %></li>
+        <li class='menu_list'><%= link_to 'アクセス/予約', accesses_path, class: "access-list" %></li>
+        <li class='menu_list'><%= link_to 'ブログ', bulogs_path, class: "blog-list" %></li>
+        <li class='menu_list'><%= link_to 'トピック', infomations_path, class: "inquiry-list" %></li>
+        <%# <li class='menu_list'><%= link_to '（仮）管理者', new_user_session_path, class: "admin-list" %>
+        <%# <li ><%= link_to '（仮）管理者', rails_admin_path, class: "admin-list" %></li>
+      </ul>
+    </div>    
   </div>
 </header>
 <h1>

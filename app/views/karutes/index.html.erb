@@ -6,7 +6,7 @@
   <% if user_signed_in?%>
     <% if current_user.admin? %>
       <div class="tab">
-        <h2>一覧は管理者のみ表示されます</h2>
+        <h2 class="iti">一覧は管理者のみ表示されます</h2>
         
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log_out_btn" %>
         <%= link_to '患者登録', new_patient_path, class: "admin_btn" %>
@@ -48,9 +48,9 @@
     <div class="top_message">   
       <h1></h1>
         <p class="amollir_comment_top">Amollir       "あもりーる"</p>
-        <p class="amollir_comment">フランス語で、「柔らかくなる」という意味の他に「和む、癒し」などの意味もあります。</p>
-        <p class="amollir_comment">患者様一人ひとりの身体のお悩みに向き合い、心も身体も癒されるような空間、施術を目指しております。</p>
-        <p class="amollir_comment">女性整体師ならではの、心のこもったオールハンド施術をご堪能していただければと思います。</p>
+        <p class="amollir_comment">フランス語で、「和らぐ」という意味の他に「柔らかくなる、癒し」などの意味もあります。</p>
+        <p class="amollir_comment">あなたの身体の痛みと心の疲れを和らげる癒やしのサロンでありたいと思っています。</p>
+        <p class="amollir_comment">身体のお悩みに合わせたきめ細かい施術と、心のこもったサービスを提供させて頂けるよう、日々目指しております。</p>
       <h1></h1>
     </div>   
     <div class="image1-2">
@@ -72,15 +72,9 @@
         </span> 
       </h2>
     </div>  
-  <div class="admin_b">
-    <%= link_to '@管理者', new_user_session_path, class: "admin-list" %>
-  </div> 
 
     <div class="tell">
       <h3 title="tell_coment">ご予約<p class="tell_number">089-904-7180</p><p>※非通知は繋がりません</p></h3>
-      <%# <span class='purchase-btn-text'>要予約: 089-904-7180</span>
-      <p><span class='purchase-btn-text2'>※ 非通知は繋がりません</span></p> %>
-      <%# <%= image_tag 'tell.png', size: '250x105', class: "tell-btn-icon" %> 
     </div> 
     <div class="top_acsess">
     </div>
