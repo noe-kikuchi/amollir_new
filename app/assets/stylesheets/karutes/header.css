@@ -31,9 +31,10 @@ h1:after {
   content: "";
   display: block;
   height: 4px;
-  background: -webkit-linear-gradient(to right, #FFFF77, rgb(212, 198, 71, 0.897) );
-  background: linear-gradient(to right, #FFFF77, rgb(212, 198, 71, 0.897) );
+  background: -webkit-linear-gradient(to right, #FFFF77, rgb(212, 198, 71) );
+  background: linear-gradient(to right, #FFFF77, rgb(212, 198, 71) );
 }
+/* , 0.897 */
 
 ul.header_list{
   counter-reset:list;
