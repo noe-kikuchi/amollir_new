@@ -36,14 +36,14 @@
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
 .s_t{
-  border: 2px solid #339933;;
+  border: 1px solid lightgray;
   width: 35%;
   padding: 10px 0;
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
 
 .s_t2{
-  border: 2px solid #339933;;
+  border: 1px solid lightgray;
   width: 75%;
   padding: 10px 0;
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
