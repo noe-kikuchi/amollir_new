@@ -1,39 +1,45 @@
-<h2>住所情報登録</h2>
+<div class="new_edit">  
 
-<%= form_with model: @patient_address, url: patient_patient_addresses_path, local: true do |f| %> 
-  <%# <%= form_for @patient_address, patient_patient_addresses_path do |f| %>
-  <%= render 'shared/error_messages', model: f.object %> 
+  <h2 class="new_edit_title">住所情報登録</h2>
 
-  <div class="field">
-    <%= f.label :postal_code %><br />
-    <%= f.text_field :postal_code %>
-  </div>
+  <%= form_with model: @patient_address, url: patient_patient_addresses_path, local: true do |f| %> 
+    <%# <%= form_for @patient_address, patient_patient_addresses_path do |f| %>
+    <%= render 'shared/error_messages', model: f.object %> 
 
-  <div class="field">
-    <%= f.label :prefecture_id %><br />
-    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
-    <%# <%= f.text_field :prefecture_id %>
-  </div>
+    <div class="field">
+      <%= f.label :postal_code %>
+      <span class="indispensable">必須</span><br />
+      <%= f.text_field :postal_code, placeholder:"ハイフン必要" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </div>
+    <div class="field">
+      <%= f.label :prefecture_id %>
+      <span class="indispensable">必須</span><br />
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+      <%# <%= f.text_field :prefecture_id %>
+    </div>
 
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </div>
+    <div class="field">
+      <%= f.label :city %>
+      <span class="indispensable">必須</span><br />
+      <%= f.text_field :city %>
+    </div>
 
-  <div class="field">
-    <%= f.label :building_name %><br />
-    <%= f.text_field :building_name %>
-  </div>
+    <div class="field">
+      <%= f.label :address %>
+      <span class="indispensable">必須</span><br />
+      <%= f.text_field :address %>
+    </div>
 
- <div class="actions">
-    <%= f.submit "住所登録", class: :form__btn  %>
-    <%=link_to 'もどる', root_path, class:"back-btn" %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.label :building_name %><br />
+      <%= f.text_field :building_name %>
+    </div>
 
+  <div class="actions">
+      <%= f.submit "住所登録", class: :form__btn  %>
+      <p><%=link_to 'もどる', root_path, class:"back-btn" %></p>
+    </div>
+  <% end %>
 
+</div>

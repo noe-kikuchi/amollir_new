@@ -1,48 +1,51 @@
-<h2 class="karute-title">カルテ編集</h2>
+<div class="new_edit">  
 
-<%= form_with model: @karute, local: true do |f| %> 
-<%= render 'shared/error_messages', model: f.object %> 
+  <h2 class="new_edit_title">カルテ編集</h2>
 
-  
+  <%= form_with model: @karute, local: true do |f| %> 
+  <%= render 'shared/error_messages', model: f.object %> 
 
-  <div class="field">
-    <%= f.label "作成日" %><br />
-    <%= f.text_field :date %>
-  </div>
+    
 
-  <div class="field">
-    <%= f.label "痛みのある部位" %><br />
-    <%= f.text_field :pain %>
-  </div>
+      <div class="field">
+        <%= f.label "作成日" %><br />
+        <%= f.text_field :date %>
+      </div>
 
-  <div class="field">
-    <%= f.label "既往症" %><br />
-    <%= f.text_field :illness %>
-  </div>
+      <div class="field">
+        <%= f.label "痛みのある部位" %><br />
+        <%= f.text_field :pain %>
+      </div>
 
-  <div class="field">
-    <%= f.label "通院歴" %><br />
-    <%= f.text_field :history %>
-  </div>
+      <div class="field">
+        <%= f.label "既往症" %><br />
+        <%= f.text_field :illness %>
+      </div>
 
-  <div class="field">
-    <%= f.label "服用薬" %><br />
-    <%= f.text_field :medicine %>
-  </div>
+      <div class="field">
+        <%= f.label "通院歴" %><br />
+        <%= f.text_field :history %>
+      </div>
 
-  <div class="field">
-    <%= f.label "日常的に行っている行動" %><br />
-    <%= f.text_field :habit %>
-  </div>
+      <div class="field">
+        <%= f.label "服用薬" %><br />
+        <%= f.text_field :medicine %>
+      </div>
 
-  <div class="field">
-    <%= f.label "メモ" %><br />
-    <%= f.text_field :memo %>
-  </div>
+      <div class="field">
+        <%= f.label "日常的に行っている行動" %><br />
+        <%= f.text_field :habit %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "カルテ編集", class: :form__btn  %>
-    <%=link_to 'もどる', root_path, class:"back-btn" %>
-  </div>
+      <div class="field">
+        <%= f.label "メモ" %><br />
+        <%= f.text_field :memo %>
+      </div>
 
-<% end %>
+      <div class="actions">
+        <%= f.submit "カルテ作成", class: :form__btn  %>
+        <p><%=link_to 'もどる', root_path, class:"back-btn" %></p>
+      </div>
+
+  <% end %>
+</div>  
