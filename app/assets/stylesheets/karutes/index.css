@@ -106,7 +106,7 @@ ul.user_list{
   justify-content: space-around;
   margin-top: 30px;
   height: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 .amollir_top_image2-1{
   width: 38vw;
@@ -242,6 +242,40 @@ h2.fotter_title span:after {
 .shop_time{
   font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
   font-size: 18px;
+}
+
+.s_nagare{
+  margin-bottom: 80px;
+}
+
+.s_nagare_t{
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  font-size: 30px;
+}
+
+.n_1_con{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 30px auto 30px;
+}
+
+.n_image{
+  width: 50%;
+}
+
+.n_comment{
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  width: 50%;
+  border: 2px solid #CCCC99;
+  padding: 30px;
+  text-align: center;
+}
+
+.n_1{
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .tell{

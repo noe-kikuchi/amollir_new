@@ -1,22 +1,37 @@
 <%= render "karutes/header"%>
 
+<div class="PF">
+  <div class="PF_comment">
+    <p class="PF_shop">ボディバランスケア　 AMOLLIR</p>
+    <p class="PF_shop">菊地珠美</p>
+    <p class="PF_name">整体師  (日本療術研究会認定資格)</p>
+    <p class="PF_name">ホルミシスリンパセラピスト</p>
+    <p class="PF_name">元水泳インストラクター</p>
+  </div> 
+  <div class="PE_image">
+    <%= image_tag("image_PF_image.png", class:"amollir_PF") %> 
+  </div>
+ 
+</div>
+
 <div class="blog_link">
   <div class="b_comment">
     <span class="g">＼＼</span>  随時更新中です!!  <span class="g">／／</span>
   </div>
-
-  <div class="insta">
-    <%= link_to image_tag('insta.png'), 'https://www.instagram.com/amollir_tamarin/' %>
-    Instagram
-  </div>
-  <div class="fb">
-    <%= link_to image_tag('FB.png'), 'https://www.facebook.com/tamami.kikuchi.900' %>
-    facebook
-  </div>
-  <div class="ameba">
-    <%= link_to image_tag('blog.png'), 'https://ameblo.jp/amollir-tama/' %>
-    ameba
-  </div>
+  <div class="blog_flex">
+    <div class="insta">
+      <%= link_to image_tag('insta.png'), 'https://www.instagram.com/amollir_tamarin/' %>
+      Instagram
+    </div>
+    <div class="fb">
+      <%= link_to image_tag('FB.png'), 'https://www.facebook.com/tamami.kikuchi.900' %>
+      facebook
+    </div>
+    <div class="ameba">
+      <%= link_to image_tag('blog.png'), 'https://ameblo.jp/amollir-tama/' %>
+      ameba
+    </div>
+  </div>  
 
 </div>
 
