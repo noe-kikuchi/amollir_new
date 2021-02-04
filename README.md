@@ -26,7 +26,7 @@
 ## 実装した機能についてのGIFと説明
   #### ホームページ部分  
 
-  [![Image from Gyazo](https://i.gyazo.com/aeb1ba5acf32fed6c47986b39537f1d3.gif)](https://gyazo.com/aeb1ba5acf32fed6c47986b39537f1d3)
+   [![Image from Gyazo](https://i.gyazo.com/aeb1ba5acf32fed6c47986b39537f1d3.gif)](https://gyazo.com/aeb1ba5acf32fed6c47986b39537f1d3)
 
 
     ・トップページの状況  
