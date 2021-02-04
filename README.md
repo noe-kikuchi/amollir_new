@@ -1,149 +1,68 @@
 # AMORRIL
 
-## アプリケーションの概要
-  こちらは、サロンのホームページをベースに、管理者はカルテの管理ができるものとなっております。
+## アプリケーションの目的
+  1.簡単にカルテを作成、編集できるようにしたい
+      →アプリケーション上にカルテ（患者情報、カルテなどの情報）を管理
+  2.ウェブからの予約管理ができるようにしたい
+      →管理者は予約を管理し、簡単にスケジューリング
 
 ## App URL
   https://amollir-new.herokuapp.com
 
-## テスト用アカウント
-  ID: amollir_admin
-  Pass: 8888
+## アカウント情報
+  Basic認証
+    ID: amollir_admin
+    Pass: 8888
+
+  管理者用アカウント
+    メールアドレス: admin@testtest
+    パスワード: noesouta87
+
 
 ## 利用方法
-  ホームページは誰でも閲覧することが可能です。
-  管理者は管理者用のアカウントでログインすることで、トップページにカルテ管理のページが表示されます。
-  そこから、カルテの登録、編集、削除を行うことができます。
-
-## 目指した課題解決
-
-
-## 洗い出した要件
+  各ページはログインの必要なく誰でも閲覧することが可能
+  管理者は管理者用のアカウントでログインすることで、トップページにカルテ管理のページが表示され、カルテの登録、編集、削除を行うことができる
 
 ## 実装した機能についてのGIFと説明
+  #### ホームページ部分
+    [![Image from Gyazo](https://i.gyazo.com/21f0612cf452cd8bf438337120a2ddd7.gif)](https://gyazo.com/21f0612cf452cd8bf438337120a2ddd7)
+
+    [![Image from Gyazo](https://i.gyazo.com/3fe85d5633c0f8ced6c2f0f73bbee85f.gif)](https://gyazo.com/3fe85d5633c0f8ced6c2f0f73bbee85f)
+
+  #### カルテ管理機能の実装
+    ①一覧画面
+    [![Image from Gyazo](https://i.gyazo.com/9a622fdc0000ce9207598466b3509570.png)](https://gyazo.com/9a622fdc0000ce9207598466b3509570)
+    ・登録している患者を五十音順で表示させる
+    ・今後患者情報が増えることを想定し、苗字、苗字カナ、名前、名前カナ、電話番号で検索をかけることができる
+
+    ②詳細画面
+    [![Image from Gyazo](https://i.gyazo.com/7ada3c49c6ec2aaadbddd1953d11c005.png)](https://gyazo.com/7ada3c49c6ec2aaadbddd1953d11c005)
+    ・登録は「患者情報」→「患者の住所」→「カルテ」の順で行い、一覧より登録が完了している患者情報をクリックすることで、カルテを確認することができる
+    ・上のリンクより各情報を編集することができ、削除すると登録されたデータを削除することができる
+
 
 ## 実装予定の機能
+  ウェブからの予約機能
+  予約の管理機能
 
 ## データベース設計
+  [![Image from Gyazo](https://i.gyazo.com/b4aaadff508d9e64acb54c942f1fff07.png)](https://gyazo.com/b4aaadff508d9e64acb54c942f1fff07)
 
 ## ローカルでの動作方法
 
+    % git clone https://github.com/noe-kikuchi/amollir_new
+    % cd amollir_new
+    % bundle install
+    % yarn install
+    % rails db:create
+    % rails db:migrate
+    % rails s
+  
+  ### 開発環境
+    Ruby 2.6.5
+    Rails 6.0.0
+    HTML/CSS
+    JavaScript
+    MySQL2
+    VS Code
 
-
-
-
-## テーブル設計
-
-### users テーブル
-
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| family_name        | string  | null: false               |
-| first_name         | string  | null: false               |
-| family_name_kana   | string  | null: false               |
-| first_name_kana    | string  | null: false               |
-| birth_date_id      | date    | null: false               |
-| email              | string  | null: false, unique: true |
-| encrypted_password | string  | null: false               |
-| phone_number       | string  | null: false               |
-
-#### Association
-
-- has_many :calenders
-- has_many :patients
-- has_one :address
-
-### address テーブル
-
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| postal_code   | string     | null: false                    |
-| prefecture_id | integer    | null: false                    |
-| city          | string     | null: false                    |
-| address       | string     | null: false                    |
-| building_name | string     |                                |
-| user          | references | null: false, foreign_key: true |
-
-#### Association
-
-- belongs_to :user
-
-### patients テーブル
-
-| Column             | Type    | Options            |
-| ------------------ | ------- | ------------------ |
-| family_name        | string  | null: false        |
-| first_name         | string  | null: false        |
-| family_name_kana   | string  | null: false        |
-| first_name_kana    | string  | null: false        |
-| birth_date_id      | date    | null: false        |
-| phone_number       | string  | null: false        |
-
-#### Association
-
-- has_one :karute
-- has_one :patient_address
-
-### patient_address テーブル
-
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| postal_code   | string     | null: false                    |
-| prefecture_id | integer    | null: false                    |
-| city          | string     | null: false                    |
-| address       | string     | null: false                    |
-| building_name | string     |                                |
-| patient       | references | null: false, foreign_key: true |
-
-#### Association
-
-- belongs_to :patients
-
-### calender テーブル
- 
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| date_id       | date       | null: false                    |
-| time          | time       | null: false                    |
-| menu_id       | integer    | null: false                    |
-| user          | references | null: false, foreign_key: true |
-| karute        | references | null: false, foreign_key: true |
-
-#### Association
-
-- belongs_to :user
-- has_many :calender_karute
-- has_many :karute, through: :calender_karute
-
-### karute テーブル
- 
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| pain          | text       |                                |
-| illness       | text       |                                |
-| history       | text       |                                |
-| medicine      | text       |                                |
-| habit         | text       |                                |
-| memo          | text       |                                |
-| patient       | references | null: false, foreign_key: true |
-| calender      | references | foreign_key: true              |
-
-
-#### Association
-
-- belongs_to :user
-- has_many :calender_karute
-- has_many :calender, through: :calender_karute
-
-
-### calender_karute テーブル
-
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| calender      | references | null: false, foreign_key: true |
-| karute        | references | null: false, foreign_key: true |
-
-#### Association
-
-- belongs_to :calender
-- belongs_to :karute
