@@ -25,9 +25,9 @@
 
 ## 実装した機能についてのGIFと説明
   #### ホームページ部分
-  ![Image from Gyazo](https://i.gyazo.com/21f0612cf452cd8bf438337120a2ddd7.gif)(https://gyazo.com21f0612cf452cd8bf438337120a2ddd7)  
+  [![Image from Gyazo](https://i.gyazo.com/21f0612cf452cd8bf438337120a2ddd7.gif)](https://gyazo.com21f0612cf452cd8bf438337120a2ddd7)  
 
-  [![Image from Gyazo](https://i.gyazo.com/3fe85d5633c0f8ced6c2f0f73bbee85f.gif)(https://gyazo.com/3fe85d5633c0f8ced6c2f0f73bbee85f)
+  [![Image from Gyazo](https://i.gyazo.com/3fe85d5633c0f8ced6c2f0f73bbee85f.gif)](https://gyazo.com/3fe85d5633c0f8ced6c2f0f73bbee85f)
 
   #### カルテ管理機能の実装
    ##### ①一覧画面
