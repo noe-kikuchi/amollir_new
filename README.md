@@ -7,8 +7,8 @@
   https://amollir-new.herokuapp.com
 
 ## テスト用アカウント
-  ID:
-  Pass:
+  ID: amollir_admin
+  Pass: 8888
 
 ## 利用方法
   ホームページは誰でも閲覧することが可能です。
