@@ -25,11 +25,6 @@
 
 ## 実装した機能についてのGIFと説明
   #### ホームページ部分  
-  ##### ①トップページ
-  
-  [![Image from Gyazo](https://i.gyazo.com/b396e07ec775ba5e26661101733ea541.gif)](https://gyazo.com/b396e07ec775ba5e26661101733ea541)
-
-  ##### ②各ページの状況
 
   [![Image from Gyazo](https://i.gyazo.com/3fe85d5633c0f8ced6c2f0f73bbee85f.gif)](https://gyazo.com/3fe85d5633c0f8ced6c2f0f73bbee85f)
 
