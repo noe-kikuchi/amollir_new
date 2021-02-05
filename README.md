@@ -53,8 +53,8 @@
     * 検索機能を付けた
 
 ## 実装予定の機能
-  ウェブからの予約機能  
-  予約の管理機能
+  ・ウェブからの予約機能  
+  ・予約の管理機能
 
 ## データベース設計
   [![Image from Gyazo](https://i.gyazo.com/b4aaadff508d9e64acb54c942f1fff07.png)](https://gyazo.com/b4aaadff508d9e64acb54c942f1fff07)
